@@ -90,7 +90,7 @@
 
  **完整代码涉及到几个方法，关键代码如下** （具体大家可以看`/entry/src/main/ets/pages/utils/ToolKits.ets`中的相关方法）：
 
-```
+```TypeScript
   /**
    * 仿照微信中的消息时间显示逻辑，将时间戳（单位：毫秒）转换为友好的显示格式.
    *
@@ -208,7 +208,7 @@
 
  **全局的消息数据管理器代码实现** （详见`/entry/src/main/ets/pages/utils/MessagesProvider.ets`）：
 
-```
+```TypeScript
 /**
  * 聊天消息的缓存数据管理提供者（集中管理所有的聊天消息和指令，消息来源为网络层通信数据包和本地发出的包
  * ，消息显示方式通过MessagesDataSource与UI界面进行解偶显示）。
@@ -351,7 +351,7 @@ export default class MessagesProvider {
 
  **IDataSource实现类** （详见`/entry/src/main/ets/pages/utils/MessagesDataSource.ets`）：
 
-```
+```TypeScript
 /**
  * 聊天界面（ChatPage.ets）中的List列表对应的数据源实现类（负责聊天消息数据的UI显示）。
  *
@@ -398,7 +398,7 @@ HarmonyChat中的网络通信层与UI层的联动，主要是通过MobileIMSDK�
 
  **MobileIMSDK鸿蒙客户端SDK提供的事件有下面这些：** 
 
-```
+```TypeScript
 export default class SocketEvent {
     /** 网络事件：登录连接或掉线重连响应反馈 */
     static readonly SOCKET_EVENT_ON_LOGIN_RESPONSE: string;
@@ -425,7 +425,7 @@ export default class SocketEvent {
 
  **HarmonyChat中通过监听以上事件并处理后，抛给UI应用层的事件就非常简单了，暂时仅仅需要以下几个事件就实现了当前的UI刷新等任务：** 
 
-```
+```TypeScript
 /**
  * 应用层的各种通知事件类型，这些事件主要用于通知UI界面的更新等。
  *

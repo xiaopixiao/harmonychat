@@ -63,7 +63,7 @@
  **你也可以直接拉取MobileIMSDK开源服务端的源码自行编译和运行，就像下面这样：** 
 ![输入图片说明](screenshots/mbserver.png)
 
-  **PS：** MobileIMSDK开源服务端的源码可以在这个目录下找到：[点此查看](https://gitee.com/jackjiang/MobileIMSDK/tree/master/demo_src/Server/MobileIMSDKServerDemo2) :paperclip:，也可以直接用编译好的程序双击run.bat就可以运行（[点此查看](https://gitee.com/jackjiang/MobileIMSDK/tree/master/demo_binary/Server/MobileIMSDKServerDemo_deploy_v6.5b240429) :paperclip:。
+  **PS：** MobileIMSDK开源服务端的源码可以在这个目录下找到：[点此查看](https://gitee.com/jackjiang/MobileIMSDK/tree/master/demo_src/Server/MobileIMSDKServerDemo2) :paperclip:，也可以直接用编译好的程序双击run.bat就可以运行（[点此查看](https://gitee.com/jackjiang/MobileIMSDK/tree/master/demo_binary/Server/MobileIMSDKServerDemo_deploy_v6.5b240429) :paperclip:）。
 
  **如上图所示：** 本工程中因为用到的是鸿蒙Next的WebSocket协议，所以请确保MobileIMSDK开源服务端的WebSocket端口是开启的哦。
 

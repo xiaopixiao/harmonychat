@@ -56,7 +56,7 @@
 
 待补充。。。
 
-# 九、技术要点1：关于服务端的部署和运行
+# 八、技术要点1：关于服务端的部署和运行
 
 本工程中默认连接的是MobileIMSDK开源工程的测试服务端，因条件有限，建议你自已部署服务端。资料请参考：《[MobileIMSDK开源服务端的部署指南](http://www.52im.net/thread-1272-1-1.html)》。
 
@@ -67,7 +67,7 @@
 
  **如上图所示：** 本工程中因为用到的是鸿蒙Next的WebSocket协议，所以请确保MobileIMSDK开源服务端的WebSocket端口是开启的哦。
 
-# 十、技术要点2：关于消息文本超长导致Row()组件被挤出屏幕可视区的问题
+# 九、技术要点2：关于消息文本超长导致Row()组件被挤出屏幕可视区的问题
 
  **问题描述：** 这是我在编写文本聊天消息组件的过程中遇到的，原图我没有截出来，问题大致是下图这样（这图是我在网上找的）。
 
@@ -79,7 +79,7 @@
 
 ![输入图片说明](screenshots/overflow2.png)
 
-# 十一、技术要点3：关于仿微信消息时间显示的代码实现
+# 十、技术要点3：关于仿微信消息时间显示的代码实现
 
 大家平时使用微信比较多，它的消息时间显示是很人性化的，所以现在开发IM聊天应用时，这个消息时间的人性化显示是必做的。
 
@@ -200,7 +200,7 @@
   }
 ```
 
-# 十二、技术要点4：关于网络数据与UI界面解偶的实现
+# 十一、技术要点4：关于网络数据与UI界面解偶的实现
 
 在IM聊天应用中，网络数据与UI界面解偶是非常关键的，否则网络代码的复杂性跟应用层逻辑的复杂性合并在一起，那代码会越写越困难。
 
@@ -392,7 +392,7 @@ export default class MessagesDataSource extends BasicDataSource<Message> {
 }
 ```
 
-# 十三、技术要点5：关于网络通信层与UI层的联动
+# 十二、技术要点5：关于网络通信层与UI层的联动
 
 HarmonyChat中的网络通信层与UI层的联动，主要是通过MobileIMSDK鸿蒙客户端SDK的事件通知实现的联动，从而解决了应用层与通信层的代码解偶。
 
@@ -454,7 +454,7 @@ export default class UIEvent {
 
 HarmonyChat中注册和监听这些事件的具体代码逻辑位于 `/entry/src/main/ets/pages/utils/IMClientManager.ets`类中，代码有点长就不贴了，请自行查看。
 
-# 十四、相关资料
+# 十三、相关资料
 
 * ① [鸿蒙Next官方开发资料](https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/js-apis-websocket-V5)
 * ② [MobileIMSDK开源框架的API文档](http://www.52im.net/topic-docs.html#mobileimsdk)
@@ -462,7 +462,7 @@ HarmonyChat中注册和监听这些事件的具体代码逻辑位于 `/entry/src
 * ④ [MobileIMSDK-鸿蒙Next端开发手册](http://www.52im.net/thread-4767-1-1.html)（* 推荐）
 * ⑤ [MobileIMSDK-服务端部署手册](http://www.52im.net/thread-1272-1-1.html)
 
-# 十五、Bug上报和技术讨论
+# 十四、Bug上报和技术讨论
 
 * 讨论学习和资料查阅：[点此进入](http://www.52im.net/)；
 * bug和建议请发送至：`jb2011@163.com`，或者在本工程中开Issue也行；

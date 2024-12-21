@@ -40,13 +40,13 @@ HarmonyChat是 **一个简洁的鸿蒙NEXT上的基于WebSocket协议的聊天�
 
 # 五、源码的开源仓库地址
 
- **HarmonyChat源码在以下托管仓库都是同步更新： **
+ **HarmonyChat源码在以下托管仓库都是同步更新：**
 
 * 1）Github：[https://github.com/JackJiang2011/harmonychat]() （可能需要梯子）
 * 2）Gitee：[https://gitee.com/jackjiang/harmonychat](https://gitee.com/jackjiang/harmonychat) （国内仓库，速度快 :point_left:）
 * 3）Gitcode：[https://gitcode.com/hellojackjiang2011/harmonychat](https://gitcode.com/hellojackjiang2011/harmonychat)（国内仓库，速度快 :point_left:）
 
- **开源MobileIMSDK的源码托管仓库： **
+ **开源MobileIMSDK的源码托管仓库：**
 
 * 1）Github：[https://github.com/JackJiang2011/MobileIMSDK](https://github.com/JackJiang2011/MobileIMSDK))
 * 2）Gitee：[https://gitee.com/jackjiang/MobileIMSDK](https://gitee.com/jackjiang/MobileIMSDK)

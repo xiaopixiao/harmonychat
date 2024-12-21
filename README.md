@@ -2,6 +2,8 @@
 
 HarmonyChat是 **一个简洁的鸿蒙NEXT上的基于WebSocket协议的聊天客户端** ，它基于[MobileIMSDK](https://gitee.com/jackjiang/MobileIMSDK)通信库， **有完善的网络通信通力、简洁的聊天界面UI、合理的代码拆分和逻辑实现，非常适合学习研究或直接用于简单的鸿蒙NEXT单页聊天项目中** 。
 
+![输入图片说明](screenshots/all_futures.jpg)
+
 # 二、为什么有HarmonyChat？
 
 我本身是[MobileIMSDK](https://gitee.com/jackjiang/MobileIMSDK)开源框架的作者，正好近期趁着开发MobileIMSDK的鸿蒙NEXT端演示界面的机会，把相关的UI代码整理出来，希望在当前鸿蒙有质量的资料比较少的情况下，能带给需要的人一点启发或帮助。
@@ -36,9 +38,19 @@ HarmonyChat是 **一个简洁的鸿蒙NEXT上的基于WebSocket协议的聊天�
 12. :triangular_flag_on_post: 适配全面屏；
 13. :triangular_flag_on_post: 详细的代码注释，便于学习研究。
 
-# 五、运行效果说明图
+# 五、源码的开源仓库地址
 
-![输入图片说明](screenshots/all_futures.jpg)
+ **HarmonyChat源码在以下托管仓库都是同步更新： **
+
+* 1）Github：[https://github.com/JackJiang2011/harmonychat]() （可能需要梯子）
+* 2）Gitee：[https://gitee.com/jackjiang/harmonychat](https://gitee.com/jackjiang/harmonychat) （国内仓库，速度快 :point_left:）
+* 3）Gitcode：[https://gitcode.com/hellojackjiang2011/harmonychat](https://gitcode.com/hellojackjiang2011/harmonychat)（国内仓库，速度快 :point_left:）
+
+ **开源MobileIMSDK的源码托管仓库： **
+
+* 1）Github：[https://github.com/JackJiang2011/MobileIMSDK](https://github.com/JackJiang2011/MobileIMSDK))
+* 2）Gitee：[https://gitee.com/jackjiang/MobileIMSDK](https://gitee.com/jackjiang/MobileIMSDK)
+* 3）Gitcode：[https://gitcode.com/hellojackjiang2011/MobileIMSDK](https://gitcode.com/hellojackjiang2011/MobileIMSDK)
 
 # 六、实际运行截图
 

@@ -1,19 +1,18 @@
-# 一、一句话总结本工程？
+# 一、HarmonyChat是什么？
 
-本工程分享的是 **一个简洁的鸿蒙NEXT上的基于WebSocket协议聊天客户端** ，它基于[MobileIMSDK](https://gitee.com/jackjiang/MobileIMSDK)通信库， **有完善的网络通信通力、简洁的聊天界面UI、合理的代码拆分和逻辑实现，非常适合学习研究或直接用于简单的聊天单面项目中** 。
+HarmonyChat是 **一个简洁的鸿蒙NEXT上的基于WebSocket协议聊天客户端** ，它基于[MobileIMSDK](https://gitee.com/jackjiang/MobileIMSDK)通信库， **有完善的网络通信通力、简洁的聊天界面UI、合理的代码拆分和逻辑实现，非常适合学习研究或直接用于简单的聊天单面项目中** 。
 
-# 二、为什么有此工程？
+# 二、为什么有HarmonyChat？
 
 我本身是[MobileIMSDK](https://gitee.com/jackjiang/MobileIMSDK)开源框架的作者，正好近期趁着开发MobileIMSDK的鸿蒙NEXT端演示界面的机会，把相关的UI代码整理出来，希望在当前鸿蒙有质量的资料比较少的情况下，能带给需要的人一点启发或帮助。
 
-你如果在本工程中看到有关MobileIMSDK的资料和字眼也不要奇怪，因为本工程中的代码、资料、想法，都是从[MobileIMSDK的鸿蒙NEXT端工程](https://gitee.com/jackjiang/MobileIMSDK/tree/master/demo_src/WebSocket)中整理和抽取出来的，目的是方便需要的以单独的UI界面和角度来学习和使用聊天界面这一块儿的代码。
+你如果在HarmonyChat中看到有关MobileIMSDK的资料和字眼也不要奇怪，因为本工程中的代码、资料、想法，都是从[MobileIMSDK的鸿蒙NEXT端工程](https://gitee.com/jackjiang/MobileIMSDK/tree/master/demo_src/WebSocket)中整理和抽取出来的，目的是方便需要的人从单独的UI界面和功能来学习和使用。
 
+# 三、谁需要HarmonyChat？
 
-# 三、谁需要？
+目前高质量的鸿蒙NEXT端IM聊天方面的开源代码还非常少（几乎找不到有价值的开源分享），所以我希望能把自已编写的相关代码抽取出来供需要的人借鉴和使用，共同进步。
 
-目前高质量的鸿蒙NEXT端IM聊天方面的开源代码还非常少（几乎找不到有价值的开源分享），希望能把自已编写的这方面的聊天UI相关的代码抽取出来供需要的人借鉴和使用，共同进步。
-
-<b>本工程特别适合以下开发者学习、研究或直接使用</b>：
+<b>HarmonyChat特别适合以下开发者学习、研究或直接使用</b>：
 
 1. :triangular_flag_on_post: 想学习使用ArkTS和ArkUI开发聊天界面的；
 2. :triangular_flag_on_post: 想学习如果在鸿蒙NEXT中对接网络通信代码的；
@@ -58,14 +57,14 @@
 
 # 八、技术要点1：关于服务端的部署和运行
 
-本工程中默认连接的是MobileIMSDK开源工程的测试服务端，因条件有限，建议你自已部署服务端。资料请参考：《[MobileIMSDK开源服务端的部署指南](http://www.52im.net/thread-1272-1-1.html)》。
+HarmonyChat中默认连接的是MobileIMSDK开源工程的测试服务端，因条件有限，建议你自已部署服务端。资料请参考：《[MobileIMSDK开源服务端的部署指南](http://www.52im.net/thread-1272-1-1.html)》。
 
  **你也可以直接拉取MobileIMSDK开源服务端的源码自行编译和运行，就像下面这样：** 
 ![输入图片说明](screenshots/mbserver.png)
 
   **PS：** MobileIMSDK开源服务端的源码可以在这个目录下找到：[点此查看](https://gitee.com/jackjiang/MobileIMSDK/tree/master/demo_src/Server/MobileIMSDKServerDemo2) :paperclip:，也可以直接用编译好的程序双击run.bat就可以运行（[点此查看](https://gitee.com/jackjiang/MobileIMSDK/tree/master/demo_binary/Server/MobileIMSDKServerDemo_deploy_v6.5b240429) :paperclip:）。
 
- **如上图所示：** 本工程中因为用到的是鸿蒙Next的WebSocket协议，所以请确保MobileIMSDK开源服务端的WebSocket端口是开启的哦。
+ **如上图所示：** HarmonyChat中因为用到的是鸿蒙Next的WebSocket协议，所以请确保MobileIMSDK开源服务端的WebSocket端口是开启的哦。
 
 # 九、技术要点2：关于消息文本超长导致Row()组件被挤出屏幕可视区的问题
 
@@ -204,7 +203,7 @@
 
 在IM聊天应用中，网络数据与UI界面解偶是非常关键的，否则网络代码的复杂性跟应用层逻辑的复杂性合并在一起，那代码会越写越困难。
 
-本工程中主要是借助了一个全局的消息数据管理器和IDataSource，实现了与聊天列表UI界面的解偶。
+HarmonyChat中主要是借助了一个全局的消息数据管理器和IDataSource，实现了与聊天列表UI界面的解偶。
 
  **全局的消息数据管理器代码实现** （详见`/entry/src/main/ets/pages/utils/MessagesProvider.ets`）：
 

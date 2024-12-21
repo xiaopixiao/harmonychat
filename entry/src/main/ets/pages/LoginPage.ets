@@ -225,7 +225,7 @@ struct LoginPage {
                 .fontSize(14)
                 .fontColor($r('sys.color.ohos_id_color_text_secondary'))
                 .lineHeight(19)
-              Text('v2.0')
+              Text('v1.0')
                 .fontSize(12)
                 .fontColor('#a0a2a6')
                 .lineHeight(19)

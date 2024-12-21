@@ -15,27 +15,27 @@
 
 <b>本工程特别适合以下开发者学习、研究或直接使用</b>：
 
-1. 想学习使用ArkTS和ArkUI开发聊天界面的；
-2. 想学习如果在鸿蒙NEXT中对接网络通信代码的；
-3. 想学习IM聊天程序如何在鸿蒙NEXT中实现UI和网络数据的逻辑分离的；
-4. 想得到可以直接使用的单页聊天界面的；
-5. 想要开发IM聊天应用，但需要一个脚手架作为起点的。
+1. :triangular_flag_on_post: 想学习使用ArkTS和ArkUI开发聊天界面的；
+2. :triangular_flag_on_post: 想学习如果在鸿蒙NEXT中对接网络通信代码的；
+3. :triangular_flag_on_post: 想学习IM聊天程序如何在鸿蒙NEXT中实现UI和网络数据的逻辑分离的；
+4. :triangular_flag_on_post: 想得到可以直接使用的单页聊天界面的；
+5. :triangular_flag_on_post: 想要开发IM聊天应用，但需要一个脚手架作为起点的。
 
 # 四、实现了哪些特性？
 
-1. 实现了一个UI简洁、代码清晰、逻辑分层合理的聊天界面（可以直接复制到一些单页聊天产中品用，比如客服聊天）；
-2. 消息的送达状态在UI界面上会自动更新显示（包括发送中、已送达、送达失败）；
-3. 网络连接状态的UI显示（含心跳呼吸灯效果）；
-4. 实现了真正的网络通信和聊天（包括完整的多端互踢、网络心跳、掉线重连、消息重传、消息应答、消息去重等），这是基于MobileIMSDK通信库实现的；
-5. 实现了隐私提醒、闪屏、登录界面的判断和跳转逻辑（可以直接复制这几个界面到你的产品中去用用）
-6. 鸿蒙NEXT的List列表在LazyForEach带来的性能优化情况下的动态UI刷新；
-7. 利用DataSource和一个全局消息缓存管理机制实现网络数据与UI的解偶（<b>这是IM消息和UI解偶的关键</b>）；
-8. 实现了跟微信基本一致的消息时间计算和显示逻辑（人性化时间、超过2分钟才显示时间）；
-9. 合理的拆分了不同消息类型组件式扩展的实现逻辑，方便扩展更多消息类型的UI显示；
-10. 解决了消息文本超长导致Row()组件被挤出屏幕可视区显示的问题（这可能是鸿蒙的bug）；
-11. 一些鸿蒙NEXT简单动画的应用；
-12. 适配全面屏；
-13. 详细的代码注释，便于学习研究。
+1. :triangular_flag_on_post: 实现了一个UI简洁、代码清晰、逻辑分层合理的聊天界面（可以直接复制到一些单页聊天产中品用，比如客服聊天）；
+2. :triangular_flag_on_post: 消息的送达状态在UI界面上会自动更新显示（包括发送中、已送达、送达失败）；
+3. :triangular_flag_on_post: 网络连接状态的UI显示（含心跳呼吸灯效果）；
+4. :triangular_flag_on_post: 实现了真正的网络通信和聊天（包括完整的多端互踢、网络心跳、掉线重连、消息重传、消息应答、消息去重等），这是基于MobileIMSDK通信库实现的；
+5. :triangular_flag_on_post: 实现了隐私提醒、闪屏、登录界面的判断和跳转逻辑（可以直接复制这几个界面到你的产品中去用用）
+6. :triangular_flag_on_post: 鸿蒙NEXT的List列表在LazyForEach带来的性能优化情况下的动态UI刷新；
+7. :triangular_flag_on_post: 利用DataSource和一个全局消息缓存管理机制实现网络数据与UI的解偶（<b>这是IM消息和UI解偶的关键</b>）；
+8. :triangular_flag_on_post: 实现了跟微信基本一致的消息时间计算和显示逻辑（人性化时间、超过2分钟才显示时间）；
+9. :triangular_flag_on_post: 合理的拆分了不同消息类型组件式扩展的实现逻辑，方便扩展更多消息类型的UI显示；
+10. :triangular_flag_on_post: 解决了消息文本超长导致Row()组件被挤出屏幕可视区显示的问题（这可能是鸿蒙的bug）；
+11. :triangular_flag_on_post: 一些鸿蒙NEXT简单动画的应用；
+12. :triangular_flag_on_post: 适配全面屏；
+13. :triangular_flag_on_post: 详细的代码注释，便于学习研究。
 
 # 五、运行效果说明图
 
@@ -63,7 +63,7 @@
  **你也可以直接拉取MobileIMSDK开源服务端的源码自行编译和运行，就像下面这样：** 
 ![输入图片说明](screenshots/mbserver.png)
 
-  **PS：** MobileIMSDK开源服务端的源码可以在这个目录下找到：[点此查看](https://gitee.com/jackjiang/MobileIMSDK/tree/master/demo_src/Server/MobileIMSDKServerDemo2)，也可以直接用编译好的程序双击run.bat就可以运行（[点此查看](https://gitee.com/jackjiang/MobileIMSDK/tree/master/demo_binary/Server/MobileIMSDKServerDemo_deploy_v6.5b240429)。
+  **PS：** MobileIMSDK开源服务端的源码可以在这个目录下找到：[点此查看](https://gitee.com/jackjiang/MobileIMSDK/tree/master/demo_src/Server/MobileIMSDKServerDemo2) :paperclip:，也可以直接用编译好的程序双击run.bat就可以运行（[点此查看](https://gitee.com/jackjiang/MobileIMSDK/tree/master/demo_binary/Server/MobileIMSDKServerDemo_deploy_v6.5b240429) :paperclip:。
 
  **如上图所示：** 本工程中因为用到的是鸿蒙Next的WebSocket协议，所以请确保MobileIMSDK开源服务端的WebSocket端口是开启的哦。
 
@@ -466,4 +466,4 @@ HarmonyChat中注册和监听这些事件的具体代码逻辑位于 `/entry/src
 
 * 讨论学习和资料查阅：[点此进入](http://www.52im.net/)；
 * bug和建议请发送至：`jb2011@163.com`，或者在本工程中开Issue也行；
-* 欢迎联系作者QQ：`413980957`、微信：`hellojackjiang`  （:point_right: [关于作者](http://www.52im.net/thread-2792-1-1.html)）。
+* 欢迎联系作者QQ：`413980957`、微信：`hellojackjiang`  （ :point_right: [关于作者](http://www.52im.net/thread-2792-1-1.html)）。

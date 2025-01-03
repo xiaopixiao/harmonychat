@@ -40,15 +40,15 @@ HarmonyChat是 **一个简洁的鸿蒙NEXT上的基于WebSocket协议的聊天�
 
 # 五、源码的开源仓库地址
 
- **HarmonyChat源码在以下托管仓库都是同步更新：**
+ **HarmonyChat源码仓库：**
 
-* 1）Gitee：[https://gitee.com/jackjiang/harmonychat](https://gitee.com/jackjiang/harmonychat) （速度快，首选 :point_left:）
+* 1）Gitee码云：[https://gitee.com/jackjiang/harmonychat](https://gitee.com/jackjiang/harmonychat) （速度快，首选 :point_left:）
 * 2）Gitcode：[https://gitcode.com/hellojackjiang2011/harmonychat](https://gitcode.com/hellojackjiang2011/harmonychat)
 * 3）Github：[https://github.com/JackJiang2011/harmonychat](https://github.com/JackJiang2011/harmonychat) 
 
- **开源MobileIMSDK的源码托管仓库：**
+ **开源MobileIMSDK的源码仓库：**
 
-* 1）Gitee：[https://gitee.com/jackjiang/MobileIMSDK](https://gitee.com/jackjiang/MobileIMSDK)
+* 1）Gitee码云：[https://gitee.com/jackjiang/MobileIMSDK](https://gitee.com/jackjiang/MobileIMSDK)
 * 2）Gitcode：[https://gitcode.com/hellojackjiang2011/MobileIMSDK](https://gitcode.com/hellojackjiang2011/MobileIMSDK)
 * 3）Github：[https://github.com/JackJiang2011/MobileIMSDK](https://github.com/JackJiang2011/MobileIMSDK))
 
@@ -65,18 +65,16 @@ HarmonyChat是 **一个简洁的鸿蒙NEXT上的基于WebSocket协议的聊天�
 
 # 七、更多详细的技术要点
 
-更详细的技术要点说明请参见我的博文《[http://www.52im.net/thread-4770-1-1.html](开源IM聊天程序HarmonyChat：基于鸿蒙NEXT的WebSocket协议)》，涉及了服务端的部署和运行、消息文本超长导致Row()组件被挤出屏幕可视区的问题、仿微信消息时间显示的代码实现、网络数据与UI界面解偶的实现、网络通信等。
+更详细的技术要点说明请参见我的博文《[开源IM聊天程序HarmonyChat：基于鸿蒙NEXT的WebSocket协议](http://www.52im.net/thread-4770-1-1.html)》，涉及了服务端的部署和运行、消息文本超长导致Row()组件被挤出屏幕可视区的问题、仿微信消息时间显示的代码实现、网络数据与UI界面解偶的实现、网络通信等。
 
 # 八、相关资料
 
 * ① [鸿蒙Next官方开发资料](https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/js-apis-websocket-V5)
-* ② [MobileIMSDK开源框架的API文档](http://www.52im.net/topic-docs.html#mobileimsdk)
-* ③ [MobileIMSDK开源IM框架源码](https://gitee.com/jackjiang/MobileIMSDK)（[Github地址点此](https://github.com/JackJiang2011/MobileIMSDK)）
-* ④ [MobileIMSDK-鸿蒙Next端开发手册](http://www.52im.net/thread-4767-1-1.html)（* 推荐）
-* ⑤ [MobileIMSDK-服务端部署手册](http://www.52im.net/thread-1272-1-1.html)
+* ② [MobileIMSDK-鸿蒙Next端开发手册](http://www.52im.net/thread-4767-1-1.html)（* 推荐）
+* ③ [MobileIMSDK-服务端部署手册](http://www.52im.net/thread-1272-1-1.html)
 
 # 九、Bug上报和技术讨论
 
 * 讨论学习和资料查阅：[点此进入](http://www.52im.net/)；
 * bug和建议请发送至：`jb2011@163.com`，或者在本工程中开Issue也行；
-* 欢迎联系作者QQ：`413980957`、微信：`hellojackjiang`  （ :point_right: [关于作者](http://www.52im.net/thread-2792-1-1.html)）。
+* 作者博客：[关于作者](http://www.52im.net/thread-2792-1-1.html)）。

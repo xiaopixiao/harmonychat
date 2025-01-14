@@ -18,7 +18,7 @@ import ToolKits from "../utils/ToolKits";
  */
 @Preview
 @Component
-export struct CustomeTitleBar {
+export struct CustomTitleBar {
 
   // 连接状态：false 连接断开、true 连接正常
   @Prop connectStatus: boolean;

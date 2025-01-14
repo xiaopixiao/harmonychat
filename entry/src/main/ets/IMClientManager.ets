@@ -18,7 +18,8 @@ import MsgSendStatus from "./pages/constants/MsgSendStatus";
 const TAG: string = '[IMClientManager] ';
 
 // MobileIMSDK服务端的WebSocket服务地址（如服务端已开启SSL，此处请使用wss）
-const IM_SERVER_URL: string = 'ws://rbcore.52im.net:3000/websocket';// TODO: 默认地址是官方演示服务，需要改成连接您自已的服务端
+// const IM_SERVER_URL: string = 'ws://rbcore.52im.net:3000/websocket';// TODO: 默认地址是官方演示服务，需要改成连接您自已的服务端
+const IM_SERVER_URL: string = 'ws://112.126.23.69:3000/websocket';// TODO: 默认地址是官方演示服务，需要改成连接您自已的服务端
 // const IM_SERVER_URL: string = 'wss://192.168.0.117:3000/websocket';// TODO: 使用TLS/SSL加密请用wss开头（服务端也必须启用TLS/SSL加密哦）
 
 /**

@@ -10,7 +10,7 @@
 
 import {ErrorCode, ClientCoreSDK, PKickoutInfo} from 'mobileimsdk/Index'
 import { ChatInputView } from './components/ChatInputView';
-import { CustomeTitleBar } from './components/ChatTitleBar'
+import { CustomTitleBar as CustomTitleBar } from './components/ChatTitleBar'
 import { MsgView_normal } from './components/msg_view/NormalMsgView';
 import { MsgView_system } from './components/msg_view/SystemMsgView';
 import Message from './model/Message';
@@ -228,7 +228,7 @@ struct ChatPage {
   build() {
     Column() {
       // 聊天界面自定义标题栏
-      CustomeTitleBar({ connectStatus: this.connectStatus, keepAliveStatus: this.keepAliveStatus })
+      CustomTitleBar({ connectStatus: this.connectStatus, keepAliveStatus: this.keepAliveStatus })
 
       // 聊天界面内容区
       Column() {
@@ -291,6 +291,21 @@ struct ChatPage {
     .backgroundColor(Color.White)
     // 适配流海屏（顶部状态栏透明并穿过，并透过底部上划操作区）
     .expandSafeArea([SafeAreaType.SYSTEM], [SafeAreaEdge.TOP, SafeAreaEdge.BOTTOM])
+
+
+  //   Stack({ alignContent: Alignment.Center }) {
+  //     Column() {
+  //       Text('Stack子元素1').fontSize(20)
+  //     }.width('100%').height('100%').zIndex(1)
+  //
+  //     Column() {
+  //       Text('Stack子元素2').fontSize(20)
+  //     }.width(150).height(150).backgroundColor(Color.Pink).zIndex(1)
+  //
+  //     Column() {
+  //       Text('Stack子元素3').fontSize(20)
+  //     }.width(200).height(200).backgroundColor(Color.Grey)
+  //   }.width(350).height(350).backgroundColor(0xe0e0e0)
   }
 }
 

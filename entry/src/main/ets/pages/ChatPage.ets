@@ -227,64 +227,70 @@ struct ChatPage {
 
   build() {
     Column() {
-      // 聊天界面自定义标题栏
-      CustomTitleBar({ connectStatus: this.connectStatus, keepAliveStatus: this.keepAliveStatus })
+      Stack({ alignContent: Alignment.Center }) {
+        // 聊天界面自定义标题栏
+        CustomTitleBar({ connectStatus: this.connectStatus, keepAliveStatus: this.keepAliveStatus }).zIndex(2)
 
-      // 聊天界面内容区
-      Column() {
-        // List性能需极致优化的情况下，还可使用“组件复用”技术，详见官方资料：
-        // https://developer.huawei.com/consumer/cn/doc/best-practices-V5/bpta-best-practices-long-list-V5#section36781044162218
-        List({ scroller: this.scroller }) {
-          LazyForEach(this.messagesDataSource, (m: Message, index: number) => {
-            ListItem() {
-              // 消息item的整体布局
-              Column() {
-                /* 显示消息时间 */
-                MsgTimeView({ message: m })
+        // 聊天界面内容区
+        Column() {
+          // List性能需极致优化的情况下，还可使用“组件复用”技术，详见官方资料：
+          // https://developer.huawei.com/consumer/cn/doc/best-practices-V5/bpta-best-practices-long-list-V5#section36781044162218
+          List({ scroller: this.scroller }) {
+            LazyForEach(this.messagesDataSource, (m: Message, index: number) => {
+              ListItem() {
+                // 消息item的整体布局
+                Column() {
+                  /* 显示消息时间 */
+                  MsgTimeView({ message: m })
 
-                /* 显示消息内容 */
-                if (m.msgType === MsgType.TYPE_SYSTEAM$INFO) {
-                  MsgView_system({ message: m })
-                } else if (m.msgType === MsgType.TYPE_TEXT) {
-                  MsgView_normal({ message: m })
-                } else {
-                  // TODO: 更多消息类型支持。。。
+                  /* 显示消息内容 */
+                  if (m.msgType === MsgType.TYPE_SYSTEAM$INFO) {
+                    MsgView_system({ message: m })
+                  } else if (m.msgType === MsgType.TYPE_TEXT) {
+                    MsgView_normal({ message: m })
+                  } else {
+                    // TODO: 更多消息类型支持。。。
+                  }
                 }
               }
-            }
-            // 列表顶部和底部的的空白间隔
-            .margin({top: index === 0 ? 15 : 0, bottom: 15})
-          }, (m: Message) => MessagesDataSource.messageItemKey(m))// 提示：在List中使用LazyForEach时，响应式ui需要key变化才会更新
-        }
-        // 监听组件触屏事件，确保触碰聊天列表时，能自动收起输入法软键盘，提升用户体验
-        .onTouch((event: TouchEvent) => {
-          // 收起软键盘
-          ToolKits.hideSoftInputMethod(this.getUIContext());
-        })
-        // 监听组件大小变化事件（用于实现当软键盘显示时，列表高度被压缩后，消息不能自动显示最后一条的问题）
-        .onSizeChange((oldValue: SizeOptions, newValue: SizeOptions) => {
-          let oldHeight = oldValue.height, newHeight = newValue.height;
-          oldHeight = (oldHeight === undefined ? 0 : oldHeight);
-          newHeight = (newHeight === undefined ? 0 : newHeight);
-          // 列表高度变小，可以认为是软键盘显示了
-          let toBeSmall = (newHeight >0 && newHeight < oldHeight);
-          if(toBeSmall) {
-            // 消息列表滚动到底部，确保最新一条消息被显示
-            this.scrollToBottom();
+              // 列表顶部和底部的的空白间隔
+              .margin({ top: index === 0 ? 15 : 0, bottom: 15 })
+            }, (m: Message) => MessagesDataSource.messageItemKey(m)) // 提示：在List中使用LazyForEach时，响应式ui需要key变化才会更新
           }
-        })
-        .scrollBar(BarState.Off)
-        .edgeEffect(EdgeEffect.Spring)
-        .width("100%")
-        .height('100%')
+          // 监听组件触屏事件，确保触碰聊天列表时，能自动收起输入法软键盘，提升用户体验
+          .onTouch((event: TouchEvent) => {
+            // 收起软键盘
+            ToolKits.hideSoftInputMethod(this.getUIContext());
+          })
+          // 监听组件大小变化事件（用于实现当软键盘显示时，列表高度被压缩后，消息不能自动显示最后一条的问题）
+          .onSizeChange((oldValue: SizeOptions, newValue: SizeOptions) => {
+            let oldHeight = oldValue.height, newHeight = newValue.height;
+            oldHeight = (oldHeight === undefined ? 0 : oldHeight);
+            newHeight = (newHeight === undefined ? 0 : newHeight);
+            // 列表高度变小，可以认为是软键盘显示了
+            let toBeSmall = (newHeight > 0 && newHeight < oldHeight);
+            if (toBeSmall) {
+              // 消息列表滚动到底部，确保最新一条消息被显示
+              this.scrollToBottom();
+            }
+          })
+          .scrollBar(BarState.Off)
+          .edgeEffect(EdgeEffect.Spring)
+          .width("100%")
+          .height('100%')
+          .layoutWeight(1)
+          .listDirection(Axis.Vertical)
+        }
+        .backgroundColor("#f0f2f6")
+        .backgroundImage($rawfile('background.jpg'))
+        .backgroundImagePosition(Alignment.Center)
+        .backgroundImageSize(ImageSize.Cover)
         .layoutWeight(1)
-        .listDirection(Axis.Vertical)
-      }
-      .backgroundColor("#f0f2f6")
-      .layoutWeight(1)
+        .zIndex(1)
 
-      // 底部消息输入区
-      ChatInputView()
+        // 底部消息输入区
+        ChatInputView().zIndex(2)
+      }.width('100%').height('100%')
     }
     .width('100%')
     .height('100%')
@@ -293,19 +299,83 @@ struct ChatPage {
     .expandSafeArea([SafeAreaType.SYSTEM], [SafeAreaEdge.TOP, SafeAreaEdge.BOTTOM])
 
 
-  //   Stack({ alignContent: Alignment.Center }) {
-  //     Column() {
-  //       Text('Stack子元素1').fontSize(20)
-  //     }.width('100%').height('100%').zIndex(1)
-  //
-  //     Column() {
-  //       Text('Stack子元素2').fontSize(20)
-  //     }.width(150).height(150).backgroundColor(Color.Pink).zIndex(1)
-  //
-  //     Column() {
-  //       Text('Stack子元素3').fontSize(20)
-  //     }.width(200).height(200).backgroundColor(Color.Grey)
-  //   }.width(350).height(350).backgroundColor(0xe0e0e0)
+    // Stack({ alignContent: Alignment.Center }) {
+    //   Column() {
+    //     Image($rawfile('background.jpg')).width('100%')
+    //   }.width('100%').zIndex(1)
+    //
+    //   Column() {
+    //     // 聊天界面自定义标题栏
+    //     CustomTitleBar({ connectStatus: this.connectStatus, keepAliveStatus: this.keepAliveStatus })
+    //
+    //     // 聊天界面内容区
+    //     Column() {
+    //       // List性能需极致优化的情况下，还可使用“组件复用”技术，详见官方资料：
+    //       // https://developer.huawei.com/consumer/cn/doc/best-practices-V5/bpta-best-practices-long-list-V5#section36781044162218
+    //       List({ scroller: this.scroller }) {
+    //         LazyForEach(this.messagesDataSource, (m: Message, index: number) => {
+    //           ListItem() {
+    //             // 消息item的整体布局
+    //             Column() {
+    //               /* 显示消息时间 */
+    //               MsgTimeView({ message: m })
+    //
+    //               /* 显示消息内容 */
+    //               if (m.msgType === MsgType.TYPE_SYSTEAM$INFO) {
+    //                 MsgView_system({ message: m })
+    //               } else if (m.msgType === MsgType.TYPE_TEXT) {
+    //                 MsgView_normal({ message: m })
+    //               } else {
+    //                 // TODO: 更多消息类型支持。。。
+    //               }
+    //             }
+    //           }
+    //           // 列表顶部和底部的的空白间隔
+    //           .margin({top: index === 0 ? 15 : 0, bottom: 15})
+    //         }, (m: Message) => MessagesDataSource.messageItemKey(m))// 提示：在List中使用LazyForEach时，响应式ui需要key变化才会更新
+    //       }
+    //       // 监听组件触屏事件，确保触碰聊天列表时，能自动收起输入法软键盘，提升用户体验
+    //       .onTouch((event: TouchEvent) => {
+    //         // 收起软键盘
+    //         ToolKits.hideSoftInputMethod(this.getUIContext());
+    //       })
+    //       // 监听组件大小变化事件（用于实现当软键盘显示时，列表高度被压缩后，消息不能自动显示最后一条的问题）
+    //       .onSizeChange((oldValue: SizeOptions, newValue: SizeOptions) => {
+    //         let oldHeight = oldValue.height, newHeight = newValue.height;
+    //         oldHeight = (oldHeight === undefined ? 0 : oldHeight);
+    //         newHeight = (newHeight === undefined ? 0 : newHeight);
+    //         // 列表高度变小，可以认为是软键盘显示了
+    //         let toBeSmall = (newHeight >0 && newHeight < oldHeight);
+    //         if(toBeSmall) {
+    //           // 消息列表滚动到底部，确保最新一条消息被显示
+    //           this.scrollToBottom();
+    //         }
+    //       })
+    //       .scrollBar(BarState.Off)
+    //       .edgeEffect(EdgeEffect.Spring)
+    //       .width("100%")
+    //       .height('100%')
+    //       .layoutWeight(1)
+    //       .listDirection(Axis.Vertical)
+    //     }
+    //     // .backgroundColor("#f0f2f6")
+    //     .backgroundImage($rawfile('background.jpg'))
+    //     .backgroundImagePosition(Alignment.Center)
+    //     .backgroundImageSize({ width: '100%'})
+    //     .layoutWeight(1)
+    //
+    //     // 底部消息输入区
+    //     ChatInputView()
+    //   }
+    //   .width('100%')
+    //   .height('100%')
+    //   .backgroundColor(Color.White)
+    //   // .backgroundImage($rawfile('background.jpg'))
+    //   // 适配流海屏（顶部状态栏透明并穿过，并透过底部上划操作区）
+    //   .expandSafeArea([SafeAreaType.SYSTEM], [SafeAreaEdge.TOP, SafeAreaEdge.BOTTOM])
+    //   .zIndex(2)
+    //
+    // }.width('100%').height('100%')
   }
 }
 

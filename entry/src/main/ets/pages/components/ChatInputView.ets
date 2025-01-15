@@ -92,7 +92,7 @@ export struct ChatInputView {
         .placeholderFont({ size: 14 })
         .placeholderColor('#a1a7af')
 
-      Button("提交", { type: ButtonType.Normal, stateEffect: true })
+      Button("发送", { type: ButtonType.Normal, stateEffect: true })
         .width(44)
         .height(34)
         .borderRadius(8)

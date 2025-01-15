@@ -274,11 +274,11 @@ struct LoginPage {
 
             Column() {
               Text() {
-                Span('Developed by ')
+                Span('Double Developed by ')
                   .fontSize(12)
                   .fontColor('#a0a2a6')
                   .lineHeight(14)
-                Span('JackJiang')
+                Span('ZUYAO ZHAO')
                   .fontSize(12)
                   .fontColor('#0A59F7')
                   .fontWeight(FontWeight.Medium)
@@ -292,7 +292,7 @@ struct LoginPage {
               .textAlign(TextAlign.Center)
               .margin({bottom: 5})
 
-              Text('Copyright © 2024 即时通讯网 / 52im.net')
+              Text('Copyright © zzy-blog.top')
                 .fontSize(12)
                 .fontColor('#a0a2a6')
                 .lineHeight(14)

@@ -133,7 +133,8 @@ export struct CustomTitleBar {
       // }
     }
     .width('100%')
-    .backgroundColor(ToolKits.chat_page_title_background_color)//'#2e3746')
+    // .backgroundColor(ToolKits.chat_page_title_background_color)//'#2e3746')
+    .backgroundBlurStyle(BlurStyle.Thin, { colorMode: ThemeColorMode.LIGHT, adaptiveColor: AdaptiveColor.DEFAULT, scale: 1.0 })
     // .linearGradient({
     //   direction:GradientDirection.Right,// 渐变方向
     //   colors:[['#2e3746',0],['#0e1a26',1]]
